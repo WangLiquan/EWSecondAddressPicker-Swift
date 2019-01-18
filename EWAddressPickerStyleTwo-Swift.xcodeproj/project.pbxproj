@@ -1,0 +1,615 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		79F7578D21E5A2C300933C4F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F7578C21E5A2C300933C4F /* AppDelegate.swift */; };
+		79F7578F21E5A2C300933C4F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F7578E21E5A2C300933C4F /* ViewController.swift */; };
+		79F7579221E5A2C300933C4F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79F7579021E5A2C300933C4F /* Main.storyboard */; };
+		79F7579421E5A2C700933C4F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79F7579321E5A2C700933C4F /* Assets.xcassets */; };
+		79F7579721E5A2C700933C4F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79F7579521E5A2C700933C4F /* LaunchScreen.storyboard */; };
+		79F757A221E5A2C700933C4F /* EWAddressPickerStyleTwo_SwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F757A121E5A2C700933C4F /* EWAddressPickerStyleTwo_SwiftTests.swift */; };
+		79F757AD21E5A2C700933C4F /* EWAddressPickerStyleTwo_SwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F757AC21E5A2C700933C4F /* EWAddressPickerStyleTwo_SwiftUITests.swift */; };
+		79F757C921E5C25D00933C4F /* EWAddressPickerPresentAnimated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F757C721E5C25D00933C4F /* EWAddressPickerPresentAnimated.swift */; };
+		79F757CA21E5C25D00933C4F /* EWAddressPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F757C821E5C25D00933C4F /* EWAddressPickerViewController.swift */; };
+		79F757CC21E5C28800933C4F /* CommonHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F757CB21E5C28800933C4F /* CommonHelper.swift */; };
+		79F757CE21E5C2EA00933C4F /* address.json in Resources */ = {isa = PBXBuildFile; fileRef = 79F757CD21E5C2E900933C4F /* address.json */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		79F7579E21E5A2C700933C4F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 79F7578121E5A2C300933C4F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 79F7578821E5A2C300933C4F;
+			remoteInfo = "EWAddressPickerStyleTwo-Swift";
+		};
+		79F757A921E5A2C700933C4F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 79F7578121E5A2C300933C4F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 79F7578821E5A2C300933C4F;
+			remoteInfo = "EWAddressPickerStyleTwo-Swift";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		79F7578921E5A2C300933C4F /* EWAddressPickerStyleTwo-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "EWAddressPickerStyleTwo-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		79F7578C21E5A2C300933C4F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		79F7578E21E5A2C300933C4F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		79F7579121E5A2C300933C4F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		79F7579321E5A2C700933C4F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		79F7579621E5A2C700933C4F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		79F7579821E5A2C700933C4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		79F7579D21E5A2C700933C4F /* EWAddressPickerStyleTwo-SwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "EWAddressPickerStyleTwo-SwiftTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		79F757A121E5A2C700933C4F /* EWAddressPickerStyleTwo_SwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EWAddressPickerStyleTwo_SwiftTests.swift; sourceTree = "<group>"; };
+		79F757A321E5A2C700933C4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		79F757A821E5A2C700933C4F /* EWAddressPickerStyleTwo-SwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "EWAddressPickerStyleTwo-SwiftUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		79F757AC21E5A2C700933C4F /* EWAddressPickerStyleTwo_SwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EWAddressPickerStyleTwo_SwiftUITests.swift; sourceTree = "<group>"; };
+		79F757AE21E5A2C700933C4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		79F757C721E5C25D00933C4F /* EWAddressPickerPresentAnimated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EWAddressPickerPresentAnimated.swift; sourceTree = "<group>"; };
+		79F757C821E5C25D00933C4F /* EWAddressPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EWAddressPickerViewController.swift; sourceTree = "<group>"; };
+		79F757CB21E5C28800933C4F /* CommonHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonHelper.swift; sourceTree = "<group>"; };
+		79F757CD21E5C2E900933C4F /* address.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = address.json; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		79F7578621E5A2C300933C4F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		79F7579A21E5A2C700933C4F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		79F757A521E5A2C700933C4F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		79F7578021E5A2C300933C4F = {
+			isa = PBXGroup;
+			children = (
+				79F7578B21E5A2C300933C4F /* EWAddressPickerStyleTwo-Swift */,
+				79F757A021E5A2C700933C4F /* EWAddressPickerStyleTwo-SwiftTests */,
+				79F757AB21E5A2C700933C4F /* EWAddressPickerStyleTwo-SwiftUITests */,
+				79F7578A21E5A2C300933C4F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		79F7578A21E5A2C300933C4F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				79F7578921E5A2C300933C4F /* EWAddressPickerStyleTwo-Swift.app */,
+				79F7579D21E5A2C700933C4F /* EWAddressPickerStyleTwo-SwiftTests.xctest */,
+				79F757A821E5A2C700933C4F /* EWAddressPickerStyleTwo-SwiftUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		79F7578B21E5A2C300933C4F /* EWAddressPickerStyleTwo-Swift */ = {
+			isa = PBXGroup;
+			children = (
+				79F757BC21E5A3A900933C4F /* EWAddressPicker */,
+				79F7578C21E5A2C300933C4F /* AppDelegate.swift */,
+				79F7578E21E5A2C300933C4F /* ViewController.swift */,
+				79F7579021E5A2C300933C4F /* Main.storyboard */,
+				79F7579321E5A2C700933C4F /* Assets.xcassets */,
+				79F7579521E5A2C700933C4F /* LaunchScreen.storyboard */,
+				79F7579821E5A2C700933C4F /* Info.plist */,
+			);
+			path = "EWAddressPickerStyleTwo-Swift";
+			sourceTree = "<group>";
+		};
+		79F757A021E5A2C700933C4F /* EWAddressPickerStyleTwo-SwiftTests */ = {
+			isa = PBXGroup;
+			children = (
+				79F757A121E5A2C700933C4F /* EWAddressPickerStyleTwo_SwiftTests.swift */,
+				79F757A321E5A2C700933C4F /* Info.plist */,
+			);
+			path = "EWAddressPickerStyleTwo-SwiftTests";
+			sourceTree = "<group>";
+		};
+		79F757AB21E5A2C700933C4F /* EWAddressPickerStyleTwo-SwiftUITests */ = {
+			isa = PBXGroup;
+			children = (
+				79F757AC21E5A2C700933C4F /* EWAddressPickerStyleTwo_SwiftUITests.swift */,
+				79F757AE21E5A2C700933C4F /* Info.plist */,
+			);
+			path = "EWAddressPickerStyleTwo-SwiftUITests";
+			sourceTree = "<group>";
+		};
+		79F757BC21E5A3A900933C4F /* EWAddressPicker */ = {
+			isa = PBXGroup;
+			children = (
+				79F757CD21E5C2E900933C4F /* address.json */,
+				79F757CB21E5C28800933C4F /* CommonHelper.swift */,
+				79F757C721E5C25D00933C4F /* EWAddressPickerPresentAnimated.swift */,
+				79F757C821E5C25D00933C4F /* EWAddressPickerViewController.swift */,
+			);
+			path = EWAddressPicker;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		79F7578821E5A2C300933C4F /* EWAddressPickerStyleTwo-Swift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 79F757B121E5A2C700933C4F /* Build configuration list for PBXNativeTarget "EWAddressPickerStyleTwo-Swift" */;
+			buildPhases = (
+				79F7578521E5A2C300933C4F /* Sources */,
+				79F7578621E5A2C300933C4F /* Frameworks */,
+				79F7578721E5A2C300933C4F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "EWAddressPickerStyleTwo-Swift";
+			productName = "EWAddressPickerStyleTwo-Swift";
+			productReference = 79F7578921E5A2C300933C4F /* EWAddressPickerStyleTwo-Swift.app */;
+			productType = "com.apple.product-type.application";
+		};
+		79F7579C21E5A2C700933C4F /* EWAddressPickerStyleTwo-SwiftTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 79F757B421E5A2C700933C4F /* Build configuration list for PBXNativeTarget "EWAddressPickerStyleTwo-SwiftTests" */;
+			buildPhases = (
+				79F7579921E5A2C700933C4F /* Sources */,
+				79F7579A21E5A2C700933C4F /* Frameworks */,
+				79F7579B21E5A2C700933C4F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				79F7579F21E5A2C700933C4F /* PBXTargetDependency */,
+			);
+			name = "EWAddressPickerStyleTwo-SwiftTests";
+			productName = "EWAddressPickerStyleTwo-SwiftTests";
+			productReference = 79F7579D21E5A2C700933C4F /* EWAddressPickerStyleTwo-SwiftTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		79F757A721E5A2C700933C4F /* EWAddressPickerStyleTwo-SwiftUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 79F757B721E5A2C700933C4F /* Build configuration list for PBXNativeTarget "EWAddressPickerStyleTwo-SwiftUITests" */;
+			buildPhases = (
+				79F757A421E5A2C700933C4F /* Sources */,
+				79F757A521E5A2C700933C4F /* Frameworks */,
+				79F757A621E5A2C700933C4F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				79F757AA21E5A2C700933C4F /* PBXTargetDependency */,
+			);
+			name = "EWAddressPickerStyleTwo-SwiftUITests";
+			productName = "EWAddressPickerStyleTwo-SwiftUITests";
+			productReference = 79F757A821E5A2C700933C4F /* EWAddressPickerStyleTwo-SwiftUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		79F7578121E5A2C300933C4F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = Ethan;
+				TargetAttributes = {
+					79F7578821E5A2C300933C4F = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					79F7579C21E5A2C700933C4F = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 79F7578821E5A2C300933C4F;
+					};
+					79F757A721E5A2C700933C4F = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 79F7578821E5A2C300933C4F;
+					};
+				};
+			};
+			buildConfigurationList = 79F7578421E5A2C300933C4F /* Build configuration list for PBXProject "EWAddressPickerStyleTwo-Swift" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 79F7578021E5A2C300933C4F;
+			productRefGroup = 79F7578A21E5A2C300933C4F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				79F7578821E5A2C300933C4F /* EWAddressPickerStyleTwo-Swift */,
+				79F7579C21E5A2C700933C4F /* EWAddressPickerStyleTwo-SwiftTests */,
+				79F757A721E5A2C700933C4F /* EWAddressPickerStyleTwo-SwiftUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		79F7578721E5A2C300933C4F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				79F7579721E5A2C700933C4F /* LaunchScreen.storyboard in Resources */,
+				79F7579421E5A2C700933C4F /* Assets.xcassets in Resources */,
+				79F757CE21E5C2EA00933C4F /* address.json in Resources */,
+				79F7579221E5A2C300933C4F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		79F7579B21E5A2C700933C4F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		79F757A621E5A2C700933C4F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		79F7578521E5A2C300933C4F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				79F757C921E5C25D00933C4F /* EWAddressPickerPresentAnimated.swift in Sources */,
+				79F757CC21E5C28800933C4F /* CommonHelper.swift in Sources */,
+				79F7578F21E5A2C300933C4F /* ViewController.swift in Sources */,
+				79F7578D21E5A2C300933C4F /* AppDelegate.swift in Sources */,
+				79F757CA21E5C25D00933C4F /* EWAddressPickerViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		79F7579921E5A2C700933C4F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				79F757A221E5A2C700933C4F /* EWAddressPickerStyleTwo_SwiftTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		79F757A421E5A2C700933C4F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				79F757AD21E5A2C700933C4F /* EWAddressPickerStyleTwo_SwiftUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		79F7579F21E5A2C700933C4F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 79F7578821E5A2C300933C4F /* EWAddressPickerStyleTwo-Swift */;
+			targetProxy = 79F7579E21E5A2C700933C4F /* PBXContainerItemProxy */;
+		};
+		79F757AA21E5A2C700933C4F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 79F7578821E5A2C300933C4F /* EWAddressPickerStyleTwo-Swift */;
+			targetProxy = 79F757A921E5A2C700933C4F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		79F7579021E5A2C300933C4F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				79F7579121E5A2C300933C4F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		79F7579521E5A2C700933C4F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				79F7579621E5A2C700933C4F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		79F757AF21E5A2C700933C4F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		79F757B021E5A2C700933C4F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		79F757B221E5A2C700933C4F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B8V4DCL3BF;
+				INFOPLIST_FILE = "EWAddressPickerStyleTwo-Swift/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Ethan.EWAddressPickerStyleTwo-Swift";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		79F757B321E5A2C700933C4F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B8V4DCL3BF;
+				INFOPLIST_FILE = "EWAddressPickerStyleTwo-Swift/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Ethan.EWAddressPickerStyleTwo-Swift";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		79F757B521E5A2C700933C4F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B8V4DCL3BF;
+				INFOPLIST_FILE = "EWAddressPickerStyleTwo-SwiftTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Ethan.EWAddressPickerStyleTwo-SwiftTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EWAddressPickerStyleTwo-Swift.app/EWAddressPickerStyleTwo-Swift";
+			};
+			name = Debug;
+		};
+		79F757B621E5A2C700933C4F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B8V4DCL3BF;
+				INFOPLIST_FILE = "EWAddressPickerStyleTwo-SwiftTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Ethan.EWAddressPickerStyleTwo-SwiftTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EWAddressPickerStyleTwo-Swift.app/EWAddressPickerStyleTwo-Swift";
+			};
+			name = Release;
+		};
+		79F757B821E5A2C700933C4F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B8V4DCL3BF;
+				INFOPLIST_FILE = "EWAddressPickerStyleTwo-SwiftUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Ethan.EWAddressPickerStyleTwo-SwiftUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "EWAddressPickerStyleTwo-Swift";
+			};
+			name = Debug;
+		};
+		79F757B921E5A2C700933C4F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B8V4DCL3BF;
+				INFOPLIST_FILE = "EWAddressPickerStyleTwo-SwiftUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Ethan.EWAddressPickerStyleTwo-SwiftUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "EWAddressPickerStyleTwo-Swift";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		79F7578421E5A2C300933C4F /* Build configuration list for PBXProject "EWAddressPickerStyleTwo-Swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				79F757AF21E5A2C700933C4F /* Debug */,
+				79F757B021E5A2C700933C4F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		79F757B121E5A2C700933C4F /* Build configuration list for PBXNativeTarget "EWAddressPickerStyleTwo-Swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				79F757B221E5A2C700933C4F /* Debug */,
+				79F757B321E5A2C700933C4F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		79F757B421E5A2C700933C4F /* Build configuration list for PBXNativeTarget "EWAddressPickerStyleTwo-SwiftTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				79F757B521E5A2C700933C4F /* Debug */,
+				79F757B621E5A2C700933C4F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		79F757B721E5A2C700933C4F /* Build configuration list for PBXNativeTarget "EWAddressPickerStyleTwo-SwiftUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				79F757B821E5A2C700933C4F /* Debug */,
+				79F757B921E5A2C700933C4F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 79F7578121E5A2C300933C4F /* Project object */;
+}
