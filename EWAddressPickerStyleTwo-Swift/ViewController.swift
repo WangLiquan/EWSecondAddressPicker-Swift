@@ -39,7 +39,6 @@ class ViewController: UIViewController {
         }
         addressPicker.view.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.3)
         addressPicker.picker.reloadAllComponents()
-        /// 弹出时日期滚动到当前日期效果
         self.present(addressPicker, animated: true) {}
     }
 
