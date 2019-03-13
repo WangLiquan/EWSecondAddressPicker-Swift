@@ -27,7 +27,7 @@ class EWAddressPickerViewController: UIViewController {
         var id: Int!
     }
 
-    var backAddress: ((String,String,String,String?)->())?
+    var backAddress: ((String,String,String,String?) -> Void)?
 
     /// 数据源初始化
     var dataDict: [String: Any]?
@@ -62,18 +62,18 @@ class EWAddressPickerViewController: UIViewController {
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
     }
-    
+
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    //MARK: - 生命周期
+    // MARK: - 生命周期
     override func viewDidLoad() {
         super.viewDidLoad()
         loadAddressData()
         drawMyView()
     }
-    //MARK: - Func
-    private func drawMyView(){
+    // MARK: - Func
+    private func drawMyView() {
         self.view.backgroundColor = UIColor.clear
         self.view.insertSubview(self.backgroundView, at: 0)
         self.modalPresentationStyle = .custom//viewcontroller弹出后之前控制器页面不隐藏 .custom代表自定义
@@ -91,7 +91,7 @@ class EWAddressPickerViewController: UIViewController {
         sure.titleLabel?.textAlignment = .right
         sure.titleLabel?.font = UIFont.systemFont(ofSize: 14)
         sure.setTitleColor(UIColor.colorWithRGBA(r: 255, g: 51, b: 102, a: 1), for: .normal)
- 
+
         cancel.addTarget(self, action: #selector(self.onClickCancel), for: .touchUpInside)
         sure.addTarget(self, action: #selector(self.onClickSure), for: .touchUpInside)
         picker = UIPickerView(frame: CGRect(x: 0, y: 30, width: ScreenInfo.Width, height: 266))
@@ -109,7 +109,7 @@ class EWAddressPickerViewController: UIViewController {
         self.transitioningDelegate = self as UIViewControllerTransitioningDelegate//自定义转场动画
     }
 
-    //MARK: onClick
+    // MARK: onClick
     @objc func onClickCancel() {
         self.dismiss(animated: true, completion: nil)
     }
@@ -125,17 +125,17 @@ class EWAddressPickerViewController: UIViewController {
         if selectR > c.regionModelArr.count - 1 {
             selectR = c.regionModelArr.count - 1
         }
-        var rStr: String? = nil
+        var rStr: String?
         if c.regionModelArr.count > 1 {
             let r = c.regionModelArr[selectR]
             rStr = r.name
         }
         var address: String = ""
-        if rStr == nil{
+        if rStr == nil {
             if p.name == c.name {
                 address = p.name
             }
-        }else {
+        } else {
             if p.name == "海外"{
                 address = rStr!
             } else {
@@ -156,14 +156,14 @@ class EWAddressPickerViewController: UIViewController {
         }
     }
 
-    //MARK: - 加载数据源
+    // MARK: - 加载数据源
     private func loadAddressData() {
         let filePath = Bundle.main.path(forResource: "address", ofType: "json")
         if filePath == nil {
             print("加载数据源失败，请检查文件路径")
             return
         }
-        var addressStr: String? = nil
+        var addressStr: String?
         do {
             addressStr = try String.init(contentsOfFile: filePath!, encoding: .utf8)
         } catch {
@@ -171,31 +171,32 @@ class EWAddressPickerViewController: UIViewController {
             return
         }
         dataDict = dictionaryWith(jsonString: addressStr)
-        if dataDict == nil { return }
-
-        provincesArr = dataDict!["province"] as! [String]?
-        citysDict = dataDict!["city"] as! [String : Any]?
-        regionsDict = dataDict!["region"] as! [String : Any]?
+        guard  dataDict != nil else {
+            return
+        }
+        provincesArr = dataDict?["province"] as? [String]? ?? []
+        citysDict = dataDict?["city"] as? [String : Any]? ?? [:]
+        regionsDict = dataDict?["region"] as? [String : Any]? ?? [:]
 
         if provincesArr == nil || citysDict == nil  || regionsDict == nil { return }
 
-        provinceIDDict = dataDict!["provinceID"] as! [String: Int]?
-        cityIDDict = dataDict!["cityID"] as! [String: Int]?
-        regionIDDict = dataDict!["regionID"] as! [String: Int]?
+        provinceIDDict = dataDict?["provinceID"] as? [String: Int]? ?? [:]
+        cityIDDict = dataDict?["cityID"] as? [String: Int]? ?? [:]
+        regionIDDict = dataDict?["regionID"] as? [String: Int]? ?? [:]
 
         if provinceIDDict == nil || cityIDDict == nil || regionIDDict == nil { return }
 
         let provinceCount = provincesArr!.count
         for i in 0..<provinceCount {
             let pName = provincesArr![i]
-            let citys = citysDict![pName] as! [String]
+            let citys = citysDict?[pName] as? [String] ?? []
             let p = Province()
             p.name = pName
             p.id = provinceIDDict![pName]
 
             var cityModels: [City] = []
             for cityName in citys {
-                let regionArr = regionsDict![cityName] as! [String]
+                let regionArr = regionsDict?[cityName] as? [String] ?? []
                 let cityModel = City()
                 cityModel.id = cityIDDict![cityName]
                 cityModel.name = cityName
@@ -216,7 +217,7 @@ class EWAddressPickerViewController: UIViewController {
     }
 
     private func dictionaryWith(jsonString: String?) -> [String: Any]? {
-        var dic: [String: Any]? = nil
+        var dic: [String: Any]?
         if jsonString != nil {
             let jsonData = jsonString!.data(using: .utf8)
             if jsonData != nil {
@@ -237,7 +238,7 @@ class EWAddressPickerViewController: UIViewController {
     }
 
 }
-//MARK: - PickerViewDelegate
+// MARK: - PickerViewDelegate
 extension EWAddressPickerViewController:UIPickerViewDelegate,UIPickerViewDataSource {
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         switch component {
@@ -276,12 +277,12 @@ extension EWAddressPickerViewController:UIPickerViewDelegate,UIPickerViewDataSou
             pickerView.selectRow(selectC, inComponent: 1, animated: true)
             pickerView.reloadComponent(2)
             pickerView.selectRow(selectR, inComponent: 2, animated: true)
-            break
+
         case 1:
             let selectR = pickerView.selectedRow(inComponent: 2)
             pickerView.reloadComponent(2)
             pickerView.selectRow(selectR, inComponent: 2, animated: true)
-            break
+
         default:
             break
         }
@@ -323,8 +324,8 @@ extension EWAddressPickerViewController:UIPickerViewDelegate,UIPickerViewDataSou
         }
     }
 }
-//MARK: - 转场动画delegate
-extension EWAddressPickerViewController:UIViewControllerTransitioningDelegate{
+// MARK: - 转场动画delegate
+extension EWAddressPickerViewController:UIViewControllerTransitioningDelegate {
     func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         let animated = EWAddressPickerPresentAnimated(type: .present)
         return animated
@@ -334,4 +335,3 @@ extension EWAddressPickerViewController:UIViewControllerTransitioningDelegate{
         return animated
     }
 }
-

@@ -30,7 +30,7 @@ class ViewController: UIViewController {
         self.view.addSubview(button)
     }
 
-    @objc func onClickSelectButton(){
+    @objc func onClickSelectButton() {
         let addressPicker = EWAddressPickerViewController()
         self.definesPresentationContext = true
 
@@ -43,4 +43,3 @@ class ViewController: UIViewController {
     }
 
 }
-

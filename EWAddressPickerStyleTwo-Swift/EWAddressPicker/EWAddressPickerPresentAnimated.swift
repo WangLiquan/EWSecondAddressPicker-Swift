@@ -30,7 +30,7 @@ class EWAddressPickerPresentAnimated: NSObject,UIViewControllerAnimatedTransitio
 
         switch type {
         case .present:
-            let toVC : EWAddressPickerViewController = transitionContext.viewController(forKey: .to) as! EWAddressPickerViewController
+            guard let toVC = transitionContext.viewController(forKey: .to) as? EWAddressPickerViewController else { return }
             let toView = toVC.view
 
             let containerView = transitionContext.containerView
@@ -43,22 +43,22 @@ class EWAddressPickerPresentAnimated: NSObject,UIViewControllerAnimatedTransitio
                 toVC.backgroundView.alpha = 1.0
                 /// datepicker向上推出
                 toVC.containV.transform =  CGAffineTransform(translationX: 0, y: -10)
-            }) { (finished) in
+            }) { ( _ ) in
                 UIView.animate(withDuration: 0.2, animations: {
                     /// transform初始化
                     toVC.containV.transform = CGAffineTransform.identity
-                }, completion: { (finished) in
+                }, completion: { (_) in
                     transitionContext.completeTransition(true)
                 })
             }
         case .dismiss:
-            let toVC : EWAddressPickerViewController = transitionContext.viewController(forKey: .from) as! EWAddressPickerViewController
+            guard let fromVC = transitionContext.viewController(forKey: .from) as? EWAddressPickerViewController else { return }
 
             UIView.animate(withDuration: 0.25, animations: {
-                toVC.backgroundView.alpha = 0.0
+                fromVC.backgroundView.alpha = 0.0
                 /// datepicker向下推回
-                toVC.containV.transform =  CGAffineTransform(translationX: 0, y: (toVC.containV.frame.height))
-            }) { (finished) in
+                fromVC.containV.transform =  CGAffineTransform(translationX: 0, y: (fromVC.containV.frame.height))
+            }) { ( _ ) in
                 transitionContext.completeTransition(true)
             }
         }
